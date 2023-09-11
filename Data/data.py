@@ -1,4 +1,4 @@
-import pandas as pd # Importación de la libreria pandas
+import pandas as pd # Se importa la biblioteca "pandas" que se encarga del análisis y manipulación de datos.
 
 # Importar datos del csv
 # Nombra una variable que contiene una tabla, extraida desde la dirección indicada
