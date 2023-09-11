@@ -1,4 +1,8 @@
-# Nombres : Maritza Ramirez (20231579001) - Camila Hernández (20231579013)
+# Nombres : 
+
+# Maritza Ramirez (20231579001)
+
+# Camila Hernández (20231579013)
 
 # **ACTIVIDAD 4**
 
