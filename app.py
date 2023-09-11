@@ -1,5 +1,6 @@
-from Data.data import *
-from BD.baseDatos import *
+""" Se importa desde distintas carpetas funciones y variables que se hayan creado ahí.  """
+from Data.data import * # Desde la carpeta "Data" se importan todos los códigos del archivo "data".
+from BD.baseDatos import * # Desde la carpeta "BD" se importan todos los códigos del archivo "baseDatos".
 from sklearn.linear_model import LinearRegression
 from Gráficas.grafica import *
 import pandas as pd
