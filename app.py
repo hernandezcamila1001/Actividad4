@@ -40,13 +40,13 @@ dataRealDeformacion = data_real['Deformación (mm)'] # Se define la variable "da
 
 # Se llama a la función “gr_sin_prediccion” que visualiza el gráfico del comportamiento de los datos reales y teóricos. 
 gr_sin_prediccion(dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion)
-# Se llama a la función “gr_con_prediccion” que visualiza el gráfico del comportamiento de los datos reales y teóricos. 
+# Se llama a la función “gr_con_prediccion” que visualiza el gráfico del comportamiento de los datos reales y teóricos, permitiendo ver un zoom de estos. 
 gr_con_prediccion(x_lim,y_lim,dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion)
-# Se llama a la función “gr_con_prediccion” que visualiza el gráfico del comportamiento de los datos reales y teóricos. 
+# Se llama a la función “gr_con_prediccion” que visualiza el gráfico del comportamiento de los datos reales y teóricos, y la predicción del modelo para el dato de 3000 kN.
 gr_con_prediccion_3000(prediction,dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion,model)
 
 
-# Sensor 2
+""" Análisis de datos (Sensor 1) """
 
 dataTeoricoEsfuerzo, dataTeoricoDeformacion = dataTeorico()
 
