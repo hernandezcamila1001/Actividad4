@@ -7,10 +7,13 @@ import pandas as pd # Se importa la biblioteca "pandas" que se encarga del anál
 
 """ Análisis de datos (Sensor 1) """
 
+""" Se llama a la función “dataTeorico()” que comprende dos valores, los cuales van a ser asignados a las variables 
+"dataTeoricoEsfuerzo" y "dataTeoricoDeformacion", donde la infomación viene siendo importada de "BD.baseDatos". """
 dataTeoricoEsfuerzo, dataTeoricoDeformacion = dataTeorico() 
 
-#Datos de la base de datos y realizamos el modelo
-data_list = lecturaDatos()
+""" Modelo de regresión """
+
+data_list = lecturaDatos() # Se define la variable "data_list" que comprende la función "lecturaDatos(), llamada desde "BD.baseDatos".
 data_real = pd.DataFrame(data_list)
 data_real_fit = data_real
 X = data_real_fit['Esfuerzo (kN)'].values.reshape(-1, 1)
