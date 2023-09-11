@@ -1,14 +1,13 @@
-import pandas as pd
+import pandas as pd # Importación de la libreria pandas
 
 # Importar datos del csv
+# Nombra una variable que contiene una tabla, extraida desde la dirección indicada
 data_teorico = pd.read_csv(r"C:\Users\Usuario\OneDrive\Escritorio\Clase 1\Actividad4\Data\Data ingeniero.csv")
 
 #Código general
-""" En caso que se exigiera realizar la limpieza de la data se haría aca"""
-
-def dataTeorico():
-    dataTeoricoEsfuerzo = data_teorico['Esfuerzo[kN]']
-    dataTeoricoDeformacion = data_teorico['Deformacion[mm]']
-    return dataTeoricoEsfuerzo, dataTeoricoDeformacion
+def dataTeorico(): # Define la función dataTeorico
+    dataTeoricoEsfuerzo = data_teorico['Esfuerzo[kN]'] # Creación de variable, se le asigna el valor de la columna Esfuerzo de la variable data_teorico
+    dataTeoricoDeformacion = data_teorico['Deformacion[mm]'] # Creación de variable, se le asigna el valor de la columna Deformación de la variable data_teorico
+    return dataTeoricoEsfuerzo, dataTeoricoDeformacion # Devuelve dos valores: dataTeoricoEsfuerzo y dataTeoricoDeformacion
 
 
