@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
-import numpy as np
+import matplotlib.pyplot as plt # Importación de biblioteca de visualización que se utiliza para crear gráficos y visualizaciones de datos
+import numpy as np #  Importación de biblioteca que proporciona soporte para matrices multidimensionales y operaciones matemáticas de alto rendimiento
 
 # Sensor 1
 
