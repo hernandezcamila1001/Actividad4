@@ -17,10 +17,10 @@ def gr_con_prediccion(x_lim,y_lim,dataTeoricoEsfuerzo,dataTeoricoDeformacion,dat
     plt.gca().invert_yaxis() # Invierte el eje y del gráfico para que los valores más bajos estén en la parte superior y los valores más altos en la parte inferior
     plt.show() # Muestra el diagrama de dispersión basico de los puntos generados
 
-# Define la función "gr_con_prediccion_3000", que guarda los argumentos como limites en 'x' y 'y'y otros argumentos, cada argumento es una variable que se utilizará dentro de la función.
+# Define la función "gr_con_prediccion_3000", que guarda los argumentos como prediction,dataTeoricoEsfuerzoy otros argumentos, cada argumento es una variable que se utilizará dentro de la función.
 def gr_con_prediccion_3000(prediction,dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion,model):
   plt.figure(figsize=(15, 6)) # Crea una nueva figura de gráfico con un tamaño específico de 15 unidades de ancho y 6 unidades de alto.
-  plt.plot(	dataTeoricoEsfuerzo , dataTeoricoDeformacion) # Traza una línea que conecta los puntos definidos por dataTeoricoEsfuerzo en el eje x y dataTeoricoDeformacion
+  plt.plot(	dataTeoricoEsfuerzo , dataTeoricoDeformacion) # Traza una línea que conecta los puntos definidos por dataTeoricoEsfuerzo en el eje x y dataTeoricoDeformacion en el eje y
   plt.scatter(	dataRealEsfuerzo , dataRealDeformacion, color='red') # Se utiliza para crear un diagrama de dispersión (scatter plot) en una visualización gráfica, con trazo rojo
   plt.plot(np.linspace(0,1000).reshape(-1,1),model.predict(np.linspace(0,1000).reshape(-1,1)),'m') 
     """Trazar una serie de puntos en un gráfico, crea una secuencia de números desde 0 hasta 1000, se cambia la forma de la secuencia 
@@ -36,22 +36,22 @@ def gr_con_prediccion_3000(prediction,dataTeoricoEsfuerzo,dataTeoricoDeformacion
   plt.gca().invert_yaxis() # Invierte el eje y del gráfico para que los valores más bajos estén en la parte superior y los valores más altos en la parte inferior
   plt.show() # Muestra el diagrama de dispersión basico de los puntos generados
 
+# Define la función "gr_con_prediccion", que guarda los argumentos como dataTeoricoEsfuerzo,dataTeoricoDeformacion y otros argumentos, cada argumento es una variable que se utilizará dentro de la función.
 def gr_sin_prediccion(dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion):
-  plt.figure(figsize=(15, 6))
-  plt.plot(	dataTeoricoEsfuerzo , dataTeoricoDeformacion)
-  plt.scatter(	dataRealEsfuerzo , dataRealDeformacion, color='red')
-  plt.xlabel('Esfuerzo [kN]')
-  plt.ylabel('Deformación [mm]')
-  plt.title('Gráfica 1: teórico versus real (Sensor 1)')
-  plt.grid()
-  plt.gca().invert_yaxis()
-  plt.show()
+  plt.figure(figsize=(15, 6)) # Crea una nueva figura de gráfico con un tamaño específico de 15 unidades de ancho y 6 unidades de alto.
+  plt.plot(	dataTeoricoEsfuerzo , dataTeoricoDeformacion) # Traza una línea que conecta los puntos definidos por dataTeoricoEsfuerzo en el eje x y dataTeoricoDeformacion en el eje y
+  plt.scatter(	dataRealEsfuerzo , dataRealDeformacion, color='red') # Se utiliza para crear un diagrama de dispersión (scatter plot) en una visualización gráfica, con trazo rojo
+  plt.xlabel('Esfuerzo [kN]') # Etiqueta el eje x con la leyenda 'Esfuerzo [kN]' 
+  plt.ylabel('Deformación [mm]') # Etiqueta el eje y con la leyenda 'Deformación [mm]'
+  plt.title('Gráfica 1: teórico versus real (Sensor 1)') # Se le asigna un nombre al titulo de la gráfica
+  plt.grid() # Agrega cuadricula al gráfico
+  plt.gca().invert_yaxis() # Invierte el eje y del gráfico para que los valores más bajos estén en la parte superior y los valores más altos en la parte inferior
+  plt.show() # Muestra el diagrama de dispersión basico de los puntos generados
 
 
 # Sensor 2
 
 def gr_con_prediccion2(x_lim,y_lim,dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion):
-    
     
     plt.figure(figsize=(15, 6))
     plt.plot(dataTeoricoEsfuerzo, dataTeoricoDeformacion)
