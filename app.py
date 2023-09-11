@@ -1,13 +1,13 @@
 """ Se importa desde distintas carpetas funciones y variables que se hayan creado ahí.  """
 from Data.data import * # Desde la carpeta "Data" se importan todos los códigos del archivo "data".
 from BD.baseDatos import * # Desde la carpeta "BD" se importan todos los códigos del archivo "baseDatos".
-from sklearn.linear_model import LinearRegression
-from Gráficas.grafica import *
-import pandas as pd
+from sklearn.linear_model import LinearRegression # Se importa la librería "LinearRegression" que es usada para generar regresiones lineales. 
+from Gráficas.grafica import * # Desde la carpeta "BD" se importan todos los códigos del archivo "grafica".
+import pandas as pd # Se importa la biblioteca "pandas" que se encarga del análisis y manipulación de datos.
 
-# Sensor 1
+""" Análisis de datos (Sensor 1) """
 
-dataTeoricoEsfuerzo, dataTeoricoDeformacion = dataTeorico()
+dataTeoricoEsfuerzo, dataTeoricoDeformacion = dataTeorico() 
 
 #Datos de la base de datos y realizamos el modelo
 data_list = lecturaDatos()
