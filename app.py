@@ -33,12 +33,16 @@ prediction = round(model.predict(np.array([3000]).reshape(-1, 1))[0][0],1) # Se 
 print('La predicción a 3000 kN es de: ', prediction ,'mm') # Se visualiza el resultado de la predicción.
 
 
-dataRealEsfuerzo = data_real['Esfuerzo (kN)']
-dataRealDeformacion = data_real['Deformación (mm)']
+dataRealEsfuerzo = data_real['Esfuerzo (kN)'] # Se define la variable "dataRealEsfuerzo" donde se disponen los datos de la columna 'Esfuerzo (kN)' de "data_real".
+dataRealDeformacion = data_real['Deformación (mm)'] # Se define la variable "dataRealDeformacion" donde se disponen los datos de la columna 'Deformación (mm)' de "data_real".
 
-#realizamos la lectura de las gráficas
+""" Lectura de los gráficos. """
+
+# Se llama a la función “gr_sin_prediccion” que visualiza el gráfico del comportamiento de los datos reales y teóricos. 
 gr_sin_prediccion(dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion)
+# Se llama a la función “gr_con_prediccion” que visualiza el gráfico del comportamiento de los datos reales y teóricos. 
 gr_con_prediccion(x_lim,y_lim,dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion)
+# Se llama a la función “gr_con_prediccion” que visualiza el gráfico del comportamiento de los datos reales y teóricos. 
 gr_con_prediccion_3000(prediction,dataTeoricoEsfuerzo,dataTeoricoDeformacion,dataRealEsfuerzo,dataRealDeformacion,model)
 
 
